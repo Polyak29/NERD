@@ -163,14 +163,14 @@
     <section class="advertis">
         <div class="container container--border">
             
-                <div><img class="advertis__picture" src="image/logo-1.png" alt=""></div>
+                <div><a href="https://htmlacademy.ru/intensive/htmlcss"><img class="advertis__picture" src="image/logo-1.png" alt=""></a></div>
                 <div><img class="advertis__picture" src="image/logo-2.png" alt=""></div>
                 <div><img class="advertis__picture" src="image/logo-3.png" alt=""></div>
                 <div><img class="advertis__picture" src="image/logo-4.png" alt=""></div>
         
         </div>
     </section>
-    <section class="map">
+    <section id="map" class="map">
         <div class="container"> 
             <div class="contact">
                 <div>
@@ -181,10 +181,31 @@
                 <div> 
                     <p  class="contact--p">тел. +7 (812) 275-75-75</p>
                 </div>
-                <div> 
-                    <button class="button slider__btn--size " href="#">Напишите нам</button>
-                </div>  
-            </div>
+                <div>
+                    <a class="modal__buttom" href="index.html#openModal"> 
+                        <button class="button slider__btn--size "> Напишите нам</button>
+                    </a>
+                </div>
+                <div id="openModal" class="modalBackground">
+                    <div class="modalWindow">
+                        <div class="modalWindow__size">    
+                            <h2 class="modalWindow__size--h2">Напишите нам</h2>
+                            <div class="modalWindow__size--info">
+                               <div> 
+                                    <label class="modalWindow--text" >Ваше имя:<br><input class="modalWindow_input" type="text" ></label>
+                                </div>
+                                <div>      
+                                    <label class="modalWindow--text" >Ваш e-mail:<br><input class="modalWindow_input" type="email"></label>
+                                </div>   
+                                </div>
+                            <label class="modalWindow--text">Ваш текст:<br><textarea name="" id="" cols="90" rows="10"></textarea></label>
+                            <button class="button slider__btn--size">Отправить </button> 
+                        </div>
+                        <a  href="index.html#map">
+                                <image  src="image/close-cross.png" title="Закрыть"></image>
+                            </a>
+                    </div>  
+                </div>
         </div>
     </section>
     <footer class="footer">
