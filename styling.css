@@ -115,7 +115,8 @@ text-transform: uppercase;
 .slider__btn--size{
     background-color: #fb565a;
     width: 240px;
-    
+    outline: none;
+    border: none;
 }
  
 .button {
@@ -131,6 +132,7 @@ text-transform: uppercase;
     text-align: center;
     border-radius: 6px;
     margin-top: 50px;
+    outline: none;
 }
 .modal__info--button{
     display: block;
@@ -145,7 +147,8 @@ text-transform: uppercase;
     text-align: center;
     border-radius: 6px;
     margin-bottom: 40px;
-    margin-top:20px; 
+    margin-top:20px;
+    outline: none; 
 }
 .modal__buttom{
     text-decoration: none;
@@ -190,10 +193,14 @@ text-transform: uppercase;
 .order__btn--size{
     background-color: #fb565a;
     width: 170px;
+    border: none;
+    outline: none;
 }
 .order__btn--size2{
     background-color: #00ca74;
     width: 170px;
+    border: none;
+    outline: none;
 }
 .order__btn--size2:hover{
     background-color:#00bc6c; 
@@ -204,6 +211,8 @@ text-transform: uppercase;
 .order__btn--size3{
     background-color: #efc849;
     width: 170px;
+    outline: none;
+    border: none;
 }
 .order__btn--size3:hover{
     background-color:#eab534; 
@@ -230,14 +239,10 @@ text-transform: uppercase;
     text-transform: uppercase;
 }
 .info__text--list{
-    list-style: none;
+    list-style: square;
 }
 .info__text--list li{
     padding-bottom:27px; 
-}
-.info__text--list li::before{
-    content: "___";
-    color: #e74246;
 }
 .container--border{
     border-top: 2px solid #eeeeee;
@@ -440,6 +445,18 @@ text-transform: uppercase;
 .template__category--p{
     font-size:14px;
     text-transform: uppercase;
+    opacity: .3;
+    cursor: pointer;
+}
+.template__category--opacity{
+    opacity: .3;
+    cursor: pointer;
+}
+.template__category--opacity:hover{
+    opacity: .6;
+}
+.template__category--opacity:active{
+    opacity: 1;
 }
 
 .icon__up{
@@ -466,11 +483,36 @@ text-transform: uppercase;
     background: #eee;
     height: 67px;
     border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box__row{
+    height: 2px;
+    background: #d7dcde;
+    flex-basis: 80%;
+    display: flex;
+}
+.box__row--active{
+    height: 2px;
+    background: #00ca74;
+    flex-basis: 67%;
+    display: flex;
+    justify-content: space-between;
+}
+.box__row--btn{
+    margin: -10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.box__row--btn:active{
+    cursor: pointer;
 }
 .slide__sum--min{
     flex:0 0 40%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 15px;
     margin-bottom: 30px;
 
@@ -478,7 +520,7 @@ text-transform: uppercase;
 .slide__sum--max{
     flex: 0 0 40%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 15px;
     margin-bottom: 30px;
 }
@@ -488,13 +530,16 @@ text-transform: uppercase;
 .input__slide{
     max-width: max-content;
     height: 27px;
+    
 }
 .slide__sum--min--input{
-    width: 98%;
-    height: 120%;
+    width: 119%;
+    height: 139%;
     border: none;
     background: #eee;
     border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
 }
 .grid, .hang{
     display: flex;
@@ -530,6 +575,8 @@ text-transform: uppercase;
     border-radius: 6px;
     margin-top: 50px;
     padding: 17px 78px;
+    outline: none;
+    border: none;
 }
 .template2{
     display: flex;
@@ -644,9 +691,10 @@ text-transform: uppercase;
 }
 .navigation__list{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-basis: 55%;
     align-items: center;
+    margin-bottom: 52px;
 
 }
 .navigation__list--page{
@@ -663,6 +711,14 @@ text-transform: uppercase;
     flex-basis: 229px;
     text-transform: uppercase;
     font-weight: bold;
+} 
+.navigation__list--page:hover, .navigation__list--next:hover{
+    cursor: pointer;
+    background: #dfdfdf;
+}
+.navigation__list--page:active, .navigation__list--next:active{
+    background: #d5d5d5;
+    opacity: .5;
 }
 
 
@@ -717,4 +773,13 @@ text-transform: uppercase;
 }
 .modalWindow--text{
     font-weight: bold;
+}
+.modalWindow__close{
+    opacity: .4;
+}
+.modalWindow__close:hover{
+    opacity: 1;
+}
+.modalWindow__close:active{
+    opacity: .1;
 }    

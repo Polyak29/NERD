@@ -41,10 +41,10 @@
                     <div class="template">
                         <div class="template__sort"><p class="form__title--h1">сортировать:</p></div>
                         <div class="template__category">
-                            <p class="template__category--p">по цене</p>
-                            <p class="template__category--p">по типу</p>
-                            <p class="template__category--p">по названию</p>
-                            <div class="icon">
+                            <p class="template__category--p template__category--opacity">по цене</p>
+                            <p class="template__category--p template__category--opacity">по типу</p>
+                            <p class="template__category--p template__category--opacity">по названию</p>
+                            <div class="icon template__category--opacity">
                                     <img  class="icon__down" src="image/icon-down-dir.png" alt="">
                                     <img  class="icon__up" src="image/icon-up-dir.png" alt="">
                             </div>
@@ -58,18 +58,23 @@
                                 <div class="form__container">
                                     <div class="slide">
                                        <div class="slide__box">
-
+                                            <div class="box__row">
+                                                <div class="box__row--active">
+                                                    <img  class="box__row--btn" src="image/filter-button.png" alt="">
+                                                    <img  class="box__row--btn" src="image/filter-button.png" alt="">
+                                                </div>
+                                            </div>
                                        </div> 
                                        <div class="slide__sum--min">
                                             <label class="slide__sum--min--p">ОТ</label>
                                             <div class=input__slide>
-                                                <input  type="text" class=slide__sum--min--input>
+                                                <input  type="text" class=slide__sum--min--input value="0">
                                             </div>  
                                        </div>
                                        <div class="slide__sum--max">
-                                            <label class="slide__sum--min--p">ДО</label>
+                                            <label class="slide__sum--min--p" >ДО</label>
                                             <div class=input__slide>
-                                                <input  type="text" class=slide__sum--min--input>
+                                                <input  type="text" class=slide__sum--min--input value="15 000">
                                             </div> 
                                        </div>
                                     </div>
@@ -192,13 +197,33 @@
                         <div> 
                             <p  class="contact--p">тел. +7 (812) 275-75-75</p>
                         </div>
-                        <div> 
-                            <button class="button slider__btn--size " href="#">Напишите нам</button>
-                        </div>  
+                        <div>
+                                <a class="modal__buttom" href="catalog.html#openModal"> 
+                                    <button class="button slider__btn--size "> Напишите нам</button>
+                                </a>
+                            </div>
+                            <div id="openModal" class="modalBackground">
+                                <div class="modalWindow">
+                                    <div class="modalWindow__size">    
+                                        <h2 class="modalWindow__size--h2">Напишите нам</h2>
+                                        <div class="modalWindow__size--info">
+                                           <div> 
+                                                <label class="modalWindow--text" >Ваше имя:<br><input class="modalWindow_input" type="text" ></label>
+                                            </div>
+                                            <div>      
+                                                <label class="modalWindow--text" >Ваш e-mail:<br><input class="modalWindow_input" type="email"></label>
+                                            </div>   
+                                            </div>
+                                        <label class="modalWindow--text">Ваш текст:<br><textarea name="" id="" cols="90" rows="10"></textarea></label>
+                                        <button class="button slider__btn--size">Отправить </button> 
+                                    </div>
+                                    <a  href="catalog.html#map">
+                                            <image class="modalWindow__close"  src="image/close-cross.png" title="Закрыть"></image>
+                                        </a>
+                                </div>  
+                            </div>
                     </div>
-                </div>
-            </div>
-            </section>
+                </section>
             <footer class="footer">
                 <div class="container">
                     <div class="socialIcon">
